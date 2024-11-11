@@ -57,9 +57,42 @@ Pada ItemCard terdapat widget `InkWell` yang memiliki fungsi onTap untuk menampi
 
 **Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?**
 
+Kegunaan `const` di Flutter adalah membuat objek yang bersifat immutable (tidak bisa diubah) dan juga compile-time constant. Keuntungan ketika menggunakan `const` pada kode Flutter, yaitu:
+1. Menghemat memori, karena Flutter hanya menyimpan objek const sekali di memori.
+2. Meningkatkan performa, karena objek `const` sudah dihitung ketika kode dikompilasi, sehingga tidak perlu dihitung ulang oleh Flutter ketika aplikasi dijalankan.
+3. Menjamin immutabilitas dan stabilitas kode, karena objek `const` tidak bisa diubah setelah dibuat, sehingga kita tidak perlu mengkhawatirkan terjadi bug akibat perubahan tak terduga dalam aplikasi.
+
+Sebaiknya kita menggunakan `const` ketika ingin membuat widget yang tidak perlu berubah selama aplikasi berjalan (contoh: `Text('Hello')`, `Icon(Icons.home)`). Sebaiknya kita tidak menggunakan `const` ketika widget perlu berubah saat aplikasi berjalan (contoh: ListView dan Stateful Widget yang akan berubah jika ada perubahan data dari pengguna).
 
 **Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!**
 
+Column: mengatur widget secara vertikal dari atas ke bawah, umumnya digunakan untuk layout vertikal seperti daftar atau formulir yang diisi dari atas ke bawah.
+
+``` dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+    Text('Flutter is fun!'),
+    Text('Let’s build something amazing.'),
+    Icon(Icons.star, color: Colors.blue),
+  ],
+)
+```
+
+Row: mengatur widget secara horizontal dari kiri ke kanan, umumnya digunakan untuk layout horizontal seperti bar navigasi yang berupa baris dari kiri ke kanan.
+
+``` dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceAround,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Icon(Icons.home, color: Colors.red),
+    Text('Home'),
+    Icon(Icons.settings, color: Colors.green),
+  ],
+)
+```
 
 **Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!**
 
