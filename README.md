@@ -70,26 +70,24 @@ Column: mengatur widget secara vertikal dari atas ke bawah, umumnya digunakan un
 
 ``` dart
 Column(
-  mainAxisAlignment: MainAxisAlignment.center,
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
-    Text('Flutter is fun!'),
-    Text('Let’s build something amazing.'),
-    Icon(Icons.star, color: Colors.blue),
+    Text('Nama: $_name'),
+    Text('Deskripsi: $_description'),
+    Text('Harga: $_price'),
   ],
-)
+),
 ```
 
 Row: mengatur widget secara horizontal dari kiri ke kanan, umumnya digunakan untuk layout horizontal seperti bar navigasi yang berupa baris dari kiri ke kanan.
 
 ``` dart
 Row(
-  mainAxisAlignment: MainAxisAlignment.spaceAround,
-  crossAxisAlignment: CrossAxisAlignment.center,
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
-    Icon(Icons.home, color: Colors.red),
-    Text('Home'),
-    Icon(Icons.settings, color: Colors.green),
+    InfoCard(title: 'NPM', content: npm),
+    InfoCard(title: 'Name', content: name),
+    InfoCard(title: 'Class', content: className),
   ],
 )
 ```
@@ -97,11 +95,36 @@ Row(
 **Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!**
 
 
+
 **Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?**
+
+Saya menggunakan `ThemeData` pada class `MyApp` di `main.dart` untuk mengatur tema aplikasi Flutter agar tetap konsisten. Pada `ThemeData`, saya mengimplementasikan tema aplikasi dengan menetapkan warna utama (primaryColor), warna aksen (accentColor), gaya teks (textTheme), dan banyak elemen visual lainnya dalam satu tempat. `ThemeData` menjaga konsistensi karena setiap perubahan pada tema dapat diterapkan di seluruh aplikasi secata otomatis, tanap harus mengubah setiap widget satu per satu secara manual.
+
+``` dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+        primarySwatch: Colors.deepPurple,
+        ).copyWith(secondary: Colors.deepPurple[400]),
+        useMaterial3: true,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+```
+
 
 
 **Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?**
 
-
+Saya menangani navigasi dalam aplikasi dengan 2 cara. Pertama, dengan cara membuat Left Drawer, yaitu drawer menu yang dapat dibuka dengan menekan tombol hamburger di pojok kiri atas. Dalam menu tersebut, terdapat tombol-tombol yang berlabel nama halaman yang tersedia (`Halaman Utama`, `Tambah Produk`), jika ditekan maka user akan diarahkan ke halaman yang sesuai. Kedua, dengan menaruh tombol di halaman utama yang akan mengarahkan ke halaman yang sesuai, yaitu `Lihat Daftar Produk`, `Tambah Produk`, dan `Logout`.
 
 </details>
