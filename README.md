@@ -51,3 +51,24 @@ Untuk membedakan warna setiap tombol, atribut baru yaitu `color` ditambahkan ke 
 Pada ItemCard terdapat widget `InkWell` yang memiliki fungsi onTap untuk menampilkan `SnackBar` (pesan sementara) yang berbeda-beda sesuai tombol yang ditekan.
 
 </details>
+
+<details>
+   <summary>Tugas 8</summary>
+
+**Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?**
+
+
+**Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!**
+
+
+**Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!**
+
+
+**Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?**
+
+
+**Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?**
+
+
+
+</details>
