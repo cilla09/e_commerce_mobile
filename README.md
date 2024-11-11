@@ -94,7 +94,16 @@ Row(
 
 **Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!**
 
+Elemen input yang saya gunakan dalam tugas kali ini:
+- `TextFormField` yang menerima input teks dari pengguna. Elemen ini saya gunakan untuk menerima input nama produk, deskripsi produk, dan harga produk.
 
+Elemen input yang tidak saya gunakan dalam tugas kali ini:
+- `Radio` yang berguna untuk memilih satu opsi dari beberapa opsi yang tersedia.
+- `CheckBox` yang berguna untuk memilih satu atau lebih opsi dari beberapa opsi yang tersedia.
+- `Switch` yang berguna untuk memilih 1 dari 2 opsi.
+- `DropdownButton` yang berguna untuk memilih satu opsi dari banyak pilihan tersedia (pilihan ditampilkan dalam container kotak ketika kotak pengisian ditekan)
+- `showTimePicker` dan `showDatePicker` yang berguna untuk menginput waktu dan tanggal.
+- `Slider` yang berguna untuk menginput suatu nilai dari sebuah range dengan menggeser kursor pada sebuah jalur garis.
 
 **Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?**
 
